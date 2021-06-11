@@ -28,4 +28,10 @@
     <center>
         <Label text="Here is new form"/>
     </center>
+    <bottom>
+        <HBox spacing="10">
+            <Label text="Current user: " />
+            <Label text="" fx:id="currentUser"/>
+        </HBox>
+    </bottom>
 </BorderPane>

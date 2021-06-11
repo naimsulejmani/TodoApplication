@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import models.UserSession;
 
 import java.io.IOException;
 
@@ -45,6 +46,7 @@ public class Controller {
         if (username.equals(password)) {
             Node source = (Node) event.getSource();
             source.getScene().getWindow().hide();
+            UserSession.username = username;
             loadMainForm("/mainform/mainform.fxml", "Main Todo Application Form");
             //ne rregull
         } else {
