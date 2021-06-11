@@ -1,14 +1,16 @@
 package mainform;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import managers.TodoManager;
 import models.TodoItem;
 import models.UserSession;
+
+import java.io.IOException;
 
 public class MainFormController {
 
@@ -37,5 +39,26 @@ public class MainFormController {
         table.getColumns().addAll(column1,column2,column3);
 
         table.setItems(TodoManager.getInstance().getItems());
+    }
+
+    public void showTodoItemDialog(ActionEvent event) {
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.initOwner(mainBorderPane.getScene().getWindow());
+        dialog.setTitle("New TodoItem");
+        dialog.setHeaderText("Ju lutem te plotesoni te gjithe te dhenat per todo!!!");
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("add_todoitem_dialog.fxml"));
+
+        try {
+            dialog.getDialogPane().setContent(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+
+        dialog.showAndWait();
+
     }
 }

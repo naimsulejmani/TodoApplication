@@ -16,7 +16,7 @@
             <menus>
                 <Menu text="Administration">
                     <items>
-                        <MenuItem text="Add Todo"/>
+                        <MenuItem text="Add Todo" onAction="#showTodoItemDialog"/>
                         <MenuItem text="Remove Todo"/>
                         <SeparatorMenuItem/>
                         <MenuItem text="Nothing"/>
