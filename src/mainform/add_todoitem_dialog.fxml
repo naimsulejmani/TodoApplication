@@ -20,7 +20,9 @@
             <TextField fx:id="txtShortDescription" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
 
             <Label text="Detail Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-            <TextArea fx:id="txtAreaDetail" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <TextArea fx:id="txtAreaDetail" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      wrapText="true"
+            />
 
             <Label text="Deadline date: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
             <DatePicker fx:id="dpDeadlineDate" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
