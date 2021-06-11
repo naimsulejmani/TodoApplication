@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/11.0.1" fx:controller="login.Controller">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="20"/>
+        <ColumnConstraints percentWidth="70"/>
+    </columnConstraints>
+
+    <HBox alignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <Label text="LOGO HERE">
+            <font>
+                <Font name="System Bold" size="23.0"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <Label text="Username: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField promptText="Username here" fx:id="txtUsername" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Password: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <PasswordField promptText="Password here" fx:id="txtPassword" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+
+</GridPane>
