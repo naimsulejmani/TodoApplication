@@ -62,6 +62,8 @@ public class Controller {
             Scene mainScene = new Scene(root);
             Stage mainStage = new Stage(StageStyle.DECORATED);
             mainStage.setScene(mainScene);
+            mainStage.setMaximized(true);
+            //mainStage.setFullScreen(true);
             mainStage.setTitle(title);
             mainStage.show();
         } catch (IOException e) {
