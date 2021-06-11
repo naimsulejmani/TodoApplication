@@ -28,7 +28,7 @@
     <HBox alignment="CENTER" GridPane.rowIndex="3" GridPane.columnSpan="2"
     spacing="10"
     >
-        <Button text="OK" fx:id="btnOK" prefWidth="75" prefHeight="40"/>
+        <Button text="OK" fx:id="btnOK" prefWidth="75" prefHeight="40" onAction="#login"/>
         <Button text="Cancel" fx:id="btnCancel" prefWidth="75" prefHeight="40"/>
     </HBox>
 
