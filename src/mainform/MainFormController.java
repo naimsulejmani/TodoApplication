@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import managers.TodoManager;
 import models.TodoItem;
 import models.UserSession;
 
@@ -35,5 +36,6 @@ public class MainFormController {
 
         table.getColumns().addAll(column1,column2,column3);
 
+        table.setItems(TodoManager.getInstance().getItems());
     }
 }
