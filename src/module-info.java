@@ -5,4 +5,5 @@ module TodoApplication {
 
 
     opens login;
+    opens mainform;
 }
